@@ -10,4 +10,4 @@ metadata:
 spec:
   type: website
   lifecycle: production
-  owner: group:default/dev
+  owner: group:default/development
