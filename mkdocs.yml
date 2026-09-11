@@ -1,0 +1,4 @@
+site_name: go-frontend-test
+repo_url: https://github.com/gusLopezC-DevOps/go-frontend-test
+nav:
+  - Inicio: index.md

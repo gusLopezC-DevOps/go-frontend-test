@@ -1,0 +1,13 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: go-frontend-test
+  description: Frontend Go de pruebas (smoke test)
+  annotations:
+    github.com/project-slug: gusLopezC-DevOps/go-frontend-test
+    backstage.io/kubernetes-id: go-frontend-test
+    backstage.io/techdocs-ref: dir:.
+spec:
+  type: website
+  lifecycle: production
+  owner: group:default/dev

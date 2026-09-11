@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: go-frontend-test
+  namespace: go-frontend-test
+  labels:
+    app: go-frontend-test
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: go-frontend-test
+  template:
+    metadata:
+      labels:
+        app: go-frontend-test
+    spec:
+      containers:
+        - name: app
+          image: docker.io/guslopezc/go-frontend-test:ci
+          ports:
+            - containerPort: 8080
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 8080
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 8080
+          resources:
+            requests:
+              cpu: 25m
+              memory: 32Mi
+            limits:
+              cpu: 100m
+              memory: 96Mi

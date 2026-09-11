@@ -1,0 +1,18 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: go-frontend-test
+  namespace: go-frontend-test
+spec:
+  ingressClassName: kong
+  rules:
+    - host: go-frontend-test.local
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: go-frontend-test
+                port:
+                  name: http
