@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: app
-          image: docker.io/guslopezc/go-frontend-test:07fda632206172595cbc0d62f60eaf787198a67a
+          image: docker.io/guslopezc/go-frontend-test:bf388944ca30ae460f1af3960dc483fd070b1fdd
           ports:
             - containerPort: 8080
           readinessProbe:
