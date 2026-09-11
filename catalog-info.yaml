@@ -6,7 +6,8 @@ metadata:
   annotations:
     github.com/project-slug: gusLopezC-DevOps/go-frontend-test
     backstage.io/kubernetes-id: go-frontend-test
-    backstage.io/techdocs-ref: dir:.
+    backstage.io/kubernetes-namespace: go-frontend-test
+    backstage.io/techdocs-ref: url:https://github.com/gusLopezC-DevOps/go-frontend-test/tree/main
 spec:
   type: website
   lifecycle: production
