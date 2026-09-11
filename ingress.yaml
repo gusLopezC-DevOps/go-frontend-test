@@ -3,6 +3,9 @@ kind: Ingress
 metadata:
   name: go-frontend-test
   namespace: go-frontend-test
+  labels:
+    app: go-frontend-test
+    backstage.io/kubernetes-id: go-frontend-test
 spec:
   ingressClassName: kong
   rules:
